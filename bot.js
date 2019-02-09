@@ -4,9 +4,9 @@ const moment = require('moment');
 const Canvas = require('canvas');
 const fs = require('fs');
 const jimp = require('jimp');
-const prefix = "-";
+const prefix = "+";
 const devs = ['390412085378547714' , '500620399801925632'];
-const adminprefix = "-";
+const adminprefix = "+";
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -25,7 +25,7 @@ client.on('ready', () => {
   console.log(`Users! [ " ${client.users.size} " ]`);
   console.log(`channels! [ " ${client.channels.size} " ]`);
   console.log('╚[════════════════════════════════════]╝')
-  console.log('By WOLF_KSA')
+  console.log('By ZEX_SYSTEM')
   console.log('╔[════════════]╗')
   console.log(' Bot Is Online')
   console.log('╚[════════════]╝')
@@ -40,7 +40,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : Diamond Codes ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`𝔾𝔸ℕ𝔾 𝕊ℍ𝕆ℙ`,"http://twitch.tv/S-F")
+client.user.setGame(`ZEX-SHOP`,"http://twitch.tv/S-F")
 client.user.setStatus("online")
  
 });
@@ -253,7 +253,7 @@ message.guild.members.forEach(m => {
 var bc = new
    Discord.RichEmbed()
    .setColor('RANDOM')
-   .setTitle('𝔾𝔸ℕ𝔾 𝕊ℍ𝕆ℙ')
+   .setTitle('ZEX-SHOP')
    .addField('سيرفر', message.guild.name)
    .addField('المرسل', message.author.username)
    .addField('الرسالة', args)
@@ -272,7 +272,7 @@ msg.delete();
 });
 
 client.on('message', function(msg) {
-    const prefix = '-'
+    const prefix = '+'
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
@@ -390,7 +390,7 @@ client.on('message', async message =>{
 });
 
 client.on('message', message => {
-	var prefix = "-"
+	var prefix = "+"
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -516,7 +516,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل ",
         footer: {
-          text: "𝔾𝔸ℕ𝔾 𝕊ℍ𝕆ℙ"
+          text: "ZEX-SHOP"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -562,7 +562,7 @@ client.on('message',async message => {
        });
 
 client.on("message", message => {
- if (message.content === "-zhelp") {
+ if (message.content === "+help") {
         message.react("✅")
            message.react("📬")
   const embed = new Discord.RichEmbed() 
@@ -578,7 +578,7 @@ client.on("message", message => {
    🎮-ping
    🎮-setCount
    🎮-members
-   🎮شات log
+   🎮SEX_SYSTEM log
    🎮-user
    🎮-say
    🎮-bot
@@ -586,7 +586,7 @@ client.on("message", message => {
    🎮-gstart
 ══════════ஜ۩۞۩ஜ════════════ 
  `)
- .setFooter(`by:𝔾𝔸ℕ𝔾 𝕊ℍ𝕆ℙ`)
+ .setFooter(filtZEX-SHOP`)
    message.channel.sendEmbed(embed)
    
    }
@@ -1371,7 +1371,7 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO 𝔾𝔸ℕ𝔾 𝕊ℍ𝕆ℙ`` ')
+            .setTitle('``INFO ZEX-SHOP`` ')
             .addField('``🌍My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``📅RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``🔐servers``', [client.guilds.size], true)
