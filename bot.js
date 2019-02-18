@@ -4,7 +4,7 @@ const moment = require('moment');
 const Canvas = require('canvas');
 const fs = require('fs');
 const jimp = require('jimp');
-const prefix = "+";
+const prefix = "p";
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -45,7 +45,7 @@ client.user.setStatus("online")
 
 client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "zex");
+   var role = member.guild.roles.find ("name", "Paris");
    member.addRole (role);
   
 })
@@ -133,13 +133,13 @@ client.on("guildMemberAdd", member => {
 
 client.on('message', message => {
 
-    var prefix = "+";
+    var prefix = "p";
           if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "ZEX SHOP";
+let copy = "Paris System";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
@@ -158,7 +158,7 @@ message.guild.members.forEach(m => {
 var bc = new
    Discord.RichEmbed()
    .setColor('RANDOM')
-   .setTitle('ZEX SHOP')
+   .setTitle('Paris System')
    .addField('سيرفر', message.guild.name)
    .addField('المرسل', message.author.username)
    .addField('الرسالة', args)
@@ -198,7 +198,7 @@ client.on('message', function(msg) {
 
 client.on('message', async message =>{
     if (message.author.boss) return;
-      var prefix = "+";
+      var prefix = "p";
   
   if (!message.content.startsWith(prefix)) return;
       let command = message.content.split(" ")[0];
@@ -256,7 +256,7 @@ client.on('message', async message =>{
   });
 
   client.on('message', message => {
-	var prefix = "+"
+	var prefix = "p";
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -295,7 +295,7 @@ client.on('message', async message =>{
 });
 
 client.on('message', message => {
-	var prefix = "+"
+	var prefix ="p";
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -378,7 +378,7 @@ client.on('message', async message => {
 })
 
 client.on('message' , message => {
-  var prefix = "+";
+  var prefix = "p";
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "ping")) {
  message.channel.send('Pong...').then((msg) => {
@@ -388,7 +388,7 @@ client.on('message' , message => {
  });
 
 client.on("message", message => {
-    var prefix = "+";
+    var prefix = "p";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -402,7 +402,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل ",
         footer: {
-          text: "ZEX SHOP"
+          text: "Paris System"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -448,7 +448,7 @@ client.on('message',async message => {
        });
 
 client.on("message", message => {
- if (message.content === "+help") {
+ if (message.content === "phelp") {
         message.react("✅")
            message.react("📬")
   const embed = new Discord.RichEmbed() 
@@ -456,23 +456,23 @@ client.on("message", message => {
      .setDescription(`
 ══════════ஜ۩۞۩ஜ════════════  
      🎮「أوامر البوت」🎮
-   🎮+server
-   🎮+mute
-   🎮+unmute
-   🎮+ban
-   🎮+clear
-   🎮+ping
-   🎮+setCount
-   🎮+members
+   🎮pserver
+   🎮pmute
+   🎮Punmute
+   🎮pban
+   🎮pclear
+   🎮pping
+   🎮psetCount
+   🎮pmembers
    🎮شات log
-   🎮+user
-   🎮+say
-   🎮+bot
-   🎮+new
-   🎮+kick
+   🎮puser
+   🎮psay
+   🎮pbot
+   🎮pnew
+   🎮pkick
 ══════════ஜ۩۞۩ஜ════════════ 
  `)
- .setFooter(`by:ZEX SHOP`)
+ .setFooter(`by:Paris System`)
    message.channel.sendEmbed(embed)
    
    }
@@ -1167,7 +1167,7 @@ client.on('ready', function() {
 });
 
 client.on('message', message => {
-        var prefix = "+";
+        var prefix = "p";
         if (message.author.bot) return;
         if (!message.content.startsWith(prefix)) return;
 
@@ -1186,13 +1186,13 @@ client.on('message', message => {
       }); 
 
 client.on('message', message => {
-    if (message.content.startsWith("+bot")) {
+    if (message.content.startsWith("pbot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO ZEX SHOP`` ')
+            .setTitle('``INFO Paris System`` ')
             .addField('``🌍My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``📅RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``🔐servers``', [client.guilds.size], true)
@@ -1202,14 +1202,14 @@ client.on('message', message => {
             .addField('``🆔My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ - ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('👑 By @!☠P̷a̷W̷e̷R̷☠! جزآئري و افتخر')
+			      .setFooter('👑 By @PN,, i.7b#٩٨٧٧')
     })
 }
 });
 
 client.on("message", (message) => {
     /// ALPHA CODES
-   if (message.content.startsWith("+new")) {     /// ALPHA CODES
+   if (message.content.startsWith("pnew")) {     /// ALPHA CODES
         const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
         if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`لازم تسوي رتبه اسمه Support Team`);
         if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
@@ -1240,7 +1240,7 @@ client.on("message", (message) => {
     }
  
  
-  if (message.content.startsWith("+close")) {
+  if (message.content.startsWith("pclose")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
         message.channel.send(`هل أنت متأكد؟ بعد التأكيد ، لا يمكنك عكس هذا الإجراء!\n للتأكيد ، اكتب\`+close\`. سيؤدي ذلك إلى مهلة زمنية في غضون 10 ثوانٍ وإلغائها`)
