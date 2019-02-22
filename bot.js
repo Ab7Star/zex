@@ -4,7 +4,7 @@ const moment = require('moment');
 const Canvas = require('canvas');
 const fs = require('fs');
 const jimp = require('jimp');
-const prefix = "p";
+const prefix = "-";
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -133,7 +133,7 @@ client.on("guildMemberAdd", member => {
 
 client.on('message', message => {
 
-    var prefix = "p";
+    var prefix = "-";
           if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -158,7 +158,7 @@ message.guild.members.forEach(m => {
 var bc = new
    Discord.RichEmbed()
    .setColor('RANDOM')
-   .setTitle('Paris System')
+   .setTitle('Gang System')
    .addField('سيرفر', message.guild.name)
    .addField('المرسل', message.author.username)
    .addField('الرسالة', args)
@@ -177,7 +177,7 @@ msg.delete();
 });
 
 client.on('message', function(msg) {
-    const prefix = '+'
+    const prefix = '-'
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
@@ -198,7 +198,7 @@ client.on('message', function(msg) {
 
 client.on('message', async message =>{
     if (message.author.boss) return;
-      var prefix = "p";
+      var prefix = "-";
   
   if (!message.content.startsWith(prefix)) return;
       let command = message.content.split(" ")[0];
@@ -256,7 +256,7 @@ client.on('message', async message =>{
   });
 
   client.on('message', message => {
-	var prefix = "p";
+	var prefix = "-";
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -295,7 +295,7 @@ client.on('message', async message =>{
 });
 
 client.on('message', message => {
-	var prefix ="p";
+	var prefix ="-";
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -378,7 +378,7 @@ client.on('message', async message => {
 })
 
 client.on('message' , message => {
-  var prefix = "p";
+  var prefix = "-";
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "ping")) {
  message.channel.send('Pong...').then((msg) => {
@@ -388,7 +388,7 @@ client.on('message' , message => {
  });
 
 client.on("message", message => {
-    var prefix = "p";
+    var prefix = "-";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -402,7 +402,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل ",
         footer: {
-          text: "Paris System"
+          text: "Gang System"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -448,7 +448,7 @@ client.on('message',async message => {
        });
 
 client.on("message", message => {
- if (message.content === "phelp") {
+ if (message.content === "-help") {
         message.react("✅")
            message.react("📬")
   const embed = new Discord.RichEmbed() 
@@ -456,23 +456,23 @@ client.on("message", message => {
      .setDescription(`
 ══════════ஜ۩۞۩ஜ════════════  
      🎮「أوامر البوت」🎮
-   🎮pserver
-   🎮pmute
-   🎮Punmute
-   🎮pban
-   🎮pclear
-   🎮pping
-   🎮psetCount
-   🎮pmembers
+   🎮-server
+   🎮-mute
+   🎮-unmute
+   🎮-ban
+   🎮-clear
+   🎮-ping
+   🎮-setCount
+   🎮-members
    🎮شات log
-   🎮puser
-   🎮psay
-   🎮pbot
-   🎮pnew
-   🎮pkick
+   🎮-user
+   🎮-say
+   🎮-bot
+   🎮-new
+   🎮-kick
 ══════════ஜ۩۞۩ஜ════════════ 
  `)
- .setFooter(`by:Paris System`)
+ .setFooter(`by:Gang System`)
    message.channel.sendEmbed(embed)
    
    }
@@ -1167,7 +1167,7 @@ client.on('ready', function() {
 });
 
 client.on('message', message => {
-        var prefix = "p";
+        var prefix = "-";
         if (message.author.bot) return;
         if (!message.content.startsWith(prefix)) return;
 
@@ -1186,13 +1186,13 @@ client.on('message', message => {
       }); 
 
 client.on('message', message => {
-    if (message.content.startsWith("pbot")) {
+    if (message.content.startsWith("-bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO Paris System`` ')
+            .setTitle('``INFO Gang System`` ')
             .addField('``🌍My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``📅RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``🔐servers``', [client.guilds.size], true)
@@ -1240,7 +1240,7 @@ client.on("message", (message) => {
     }
  
  
-  if (message.content.startsWith("pclose")) {
+  if (message.content.startsWith("-close")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
         message.channel.send(`هل أنت متأكد؟ بعد التأكيد ، لا يمكنك عكس هذا الإجراء!\n للتأكيد ، اكتب\`+close\`. سيؤدي ذلك إلى مهلة زمنية في غضون 10 ثوانٍ وإلغائها`)
