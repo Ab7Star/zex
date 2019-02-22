@@ -38,14 +38,14 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : Diamond Codes ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`+help | ZEX SHOP`,"http://twitch.tv/S-F")
+client.user.setGame(`-help | Gang System`,"http://twitch.tv/S-F")
 client.user.setStatus("online")
  
 });
 
 client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "Paris");
+   var role = member.guild.roles.find ("name", "Gang");
    member.addRole (role);
   
 })
