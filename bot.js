@@ -248,4 +248,4 @@ client.on('message', msg => {
 }
 });
 
-client.login("التـوكـنـ")
+client.login("Ab7Star_YT")
