@@ -40,7 +40,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : Diamond Codes ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`𝔾𝔸ℕ𝔾 𝕊ℍ𝕆ℙ`,"http://twitch.tv/S-F")
+client.user.setGame(`𝔾𝔸ℕ𝔾`,"http://twitch.tv/S-F")
 client.user.setStatus("online")
  
 });
@@ -98,7 +98,7 @@ client.on('message', async rokz => {
 [${time}]
 [${lang}]`)
  
-              let rokzz = rokz.guild.channels.find("name","𝔾𝔸ℕ𝔾-𝕊ℍ𝕆ℙ")
+              let rokzz = rokz.guild.channels.find("name","𝔾𝔸ℕ𝔾-")
  
               setTimeout(() => {
  
@@ -253,7 +253,7 @@ message.guild.members.forEach(m => {
 var bc = new
    Discord.RichEmbed()
    .setColor('RANDOM')
-   .setTitle('𝔾𝔸ℕ𝔾 𝕊ℍ𝕆ℙ')
+   .setTitle('𝔾𝔸ℕ𝔾')
    .addField('سيرفر', message.guild.name)
    .addField('المرسل', message.author.username)
    .addField('الرسالة', args)
@@ -516,7 +516,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل ",
         footer: {
-          text: "𝔾𝔸ℕ𝔾 𝕊ℍ𝕆ℙ"
+          text: "𝔾𝔸ℕ𝔾 "
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -562,7 +562,7 @@ client.on('message',async message => {
        });
 
 client.on("message", message => {
- if (message.content === "-zhelp") {
+ if (message.content === "-help") {
         message.react("✅")
            message.react("📬")
   const embed = new Discord.RichEmbed() 
@@ -586,7 +586,7 @@ client.on("message", message => {
    🎮-gstart
 ══════════ஜ۩۞۩ஜ════════════ 
  `)
- .setFooter(`by:𝔾𝔸ℕ𝔾 𝕊ℍ𝕆ℙ`)
+ .setFooter(`by:𝔾𝔸ℕ𝔾`)
    message.channel.sendEmbed(embed)
    
    }
@@ -1539,4 +1539,4 @@ hours = 12;
   }
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.Ab7Star_YT);
